@@ -1,0 +1,28 @@
+[package]
+name = "fiskar"
+version = "0.1.0"
+authors = ["MinusGix <minusgix@gmail.com>"]
+edition = "2018"
+
+[features]
+default = []
+
+
+[dependencies]
+# Terminal user interface
+#cursive = "0.15.0"
+cursive = { git = "https://github.com/gyscos/cursive.git", branch = "main" }
+# Websocket connection to chat
+tungstenite = { version = "0.11.1", features = ["tls"] }
+# Url parsing to load the socket
+url = "2.1.0"
+# For parsing and forming json messages
+json = "0.12.4"
+# For parsing hack.chat type definitions
+hack_chat_types = { git = "https://github.com/MinusGix/hack_chat_types.git", features = ["json_parsing"] }
+# logging
+slog = "2.7.0"
+slog-unwrap = "0.9"
+sloggers = "1.0.1"
+# Terminal arguments
+clap = "2.33.3"
