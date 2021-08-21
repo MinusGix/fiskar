@@ -531,7 +531,7 @@ mod tests {
     use super::{range_intersection, range_remove, StyledIndexedSpan, StyledString};
 
     #[test]
-    #[allow(clippy::clippy::reversed_empty_ranges)]
+    #[allow(clippy::reversed_empty_ranges)]
     fn test_range_intersection() {
         // Emptiness
         assert_eq!(range_intersection(0..0, 0..0), None);
@@ -567,7 +567,7 @@ mod tests {
     }
 
     #[test]
-    #[allow(clippy::clippy::reversed_empty_ranges)]
+    #[allow(clippy::reversed_empty_ranges)]
     fn test_range_removal() {
         let empty: (Option<Range<usize>>, Option<Range<usize>>) = (None, None);
         // Empty
@@ -612,7 +612,7 @@ mod tests {
             spans: vec![testing_span.clone()],
         };
         let original_testing = testing.clone();
-        #[allow(clippy::clippy::eq_op)]
+        #[allow(clippy::eq_op)]
         {
             assert_eq!(testing, testing);
         }
